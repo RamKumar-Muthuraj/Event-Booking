@@ -3,7 +3,7 @@ import { DollarSignIcon, MapPinIcon } from "lucide-react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function Cards({ event, action, onEdit,onDelete, role }) {
+function Cards({ event, action, onEdit, onDelete, role }) {
   if (!event) return null;
 
   const { imageTwo, title, description, status, date, location, price } = event;
@@ -15,16 +15,24 @@ function Cards({ event, action, onEdit,onDelete, role }) {
                     hover:shadow-xl hover:-translate-y-1 
                     transition-all duration-300 flex flex-row h-60 relative group cursor-pointer"
     >
-      <div className="absolute -top-20 right-5 text-[200px] text-[#E961FEB6] opacity-45 group-hover:opacity-100 transition-opacity duration-300 z-10 text-outline group-hover:no-outline pointer-events-none select-none">
+      <div
+        className={`absolute -top-20 right-5 text-[200px] text-[#E961FEB6] opacity-45 transition-opacity duration-300 z-10 text-outline pointer-events-none   select-none`}
+      >
         {title.charAt(0).toUpperCase()}
       </div>
 
       {role === "admin" && (
         <div className="absolute flex items-center justify-between top-3 right-3 gap-2">
-          <div onClick={onEdit} className="border-(--purple-color) rounded-full bg-white/60 backdrop-blur-sm p-3 text-(--text-secondary-color)">
+          <div
+            onClick={onEdit}
+            className="border-(--purple-color) rounded-full bg-white/60 backdrop-blur-sm p-3 text-(--text-secondary-color)"
+          >
             <Pencil1Icon className="w-4 h-4" />
           </div>
-          <div onClick={onDelete} className="border-(--purple-color) rounded-full bg-red-300 backdrop-blur-sm p-3 text-(--text-secondary-color)">
+          <div
+            onClick={onDelete}
+            className="border-(--purple-color) rounded-full bg-red-300 backdrop-blur-sm p-3 text-(--text-secondary-color)"
+          >
             <TrashIcon className="w-4 h-4" />
           </div>
         </div>
@@ -56,14 +64,14 @@ function Cards({ event, action, onEdit,onDelete, role }) {
         <div className="grow flex flex-col min-h-0 overflow-hidden">
           <h3
             className="text-lg sm:text-xl md:text-2xl font-bold 
-                         text-[var(--accent-color)] mb-2"
+                         text-(--accent-color) mb-2"
           >
             {title}
           </h3>
 
           {description && (
             <p
-              className="text-(--text-accent-color)
+              className="text-gray-300 font-medium
              text-xs sm:text-sm mb-2
              max-h-16 overflow-y-auto pr-1
              scrollbar-thin"

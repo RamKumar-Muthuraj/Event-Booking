@@ -1,0 +1,74 @@
+[
+  {
+    "id": "2e2c7c10-2c2e-4e6b-a202-02a2a2a2a202",
+    "title": "Avengers: Secret Wars",
+    "description": "Earth’s mightiest heroes unite once again to battle multiverse chaos.",
+    "imageOne": "https://wallpaperaccess.com/full/329583.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/329597.jpg",
+    "date": "2026-03-03",
+    "location": "PVR Luxe, Bangalore",
+    "price": "18",
+    "seats": "60",
+    "status": "Upcoming"
+  },
+  {
+    "id": "5c5c7c10-5c5e-4e6b-a505-05a5a5a5a505",
+    "title": "The Batman Night Screening",
+    "description": "Experience Gotham like never before in a dark cinematic masterpiece.",
+    "imageOne": "https://wallpaperaccess.com/full/317501.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/317509.jpg",
+    "date": "2026-03-07",
+    "location": "SPI Palazzo",
+    "price": "15",
+    "seats": "60",
+    "status": "Live"
+  },
+  {
+    "id": "6d6c7c10-6c6e-4e6b-a606-06a6a6a6a606",
+    "title": "Comedy Night Live",
+    "description": "Top stand-up comedians delivering nonstop laughter.",
+    "imageOne": "https://wallpaperaccess.com/full/248962.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/248970.jpg",
+    "date": "2026-03-18",
+    "location": "Phoenix Arena",
+    "price": "12",
+    "seats": "60",
+    "status": "Upcoming"
+  },
+  {
+    "id": "7e7c7c10-7c7e-4e6b-a707-07a7a7a7a707",
+    "title": "DJ Sunset Party",
+    "description": "Dance through sunset with live DJs and beach vibes.",
+    "imageOne": "https://wallpaperaccess.com/full/1281606.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/1281609.jpg",
+    "date": "2026-03-20",
+    "location": "Mahabalipuram Beach",
+    "price": "22",
+    "seats": "60",
+    "status": "Upcoming"
+  },
+  {
+    "id": "9g9c7c10-9c9e-4e6b-a909-09a9a9a9a909",
+    "title": "Tech Innovators Summit",
+    "description": "Explore future technology trends with industry leaders.",
+    "imageOne": "https://wallpaperaccess.com/full/279547.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/279548.jpg",
+    "date": "2026-03-25",
+    "location": "Chennai Trade Center",
+    "price": "25",
+    "seats": "60",
+    "status": "Upcoming"
+  },
+  {
+    "id": "10h0c7c10-ac0e-4e6b-a010-10a0a0a0a010",
+    "title": "Marvel Fan Premiere",
+    "description": "Exclusive premiere night for Marvel universe fans.",
+    "imageOne": "https://wallpaperaccess.com/full/330000.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/330010.jpg",
+    "date": "2026-03-12",
+    "location": "AGS Cinemas",
+    "price": "19",
+    "seats": "60",
+    "status": "Live"
+  }
+]

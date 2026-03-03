@@ -71,7 +71,7 @@ export default function NavBar() {
           />
           <div onClick={() => logout()}>
             <LogOut className="w-7 h-7 object-cover text-red-600 hover:text-red-500" />
-         </div>
+          </div>
         </div>
 
         <button

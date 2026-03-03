@@ -15,10 +15,9 @@ export default function BookingTicket() {
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
 
-  const events = JSON.parse(localStorage.getItem("events")) || [];
-  const event = events.find((e) => e.id === id);
+  const { allEvents, editEvent } = useEventBooking();
+  const event = allEvents.find((e) => e.id === id);
 
-  const { editEvent } = useEventBooking();
   const { currentUser } = useAuth();
 
   const {
@@ -107,7 +106,7 @@ export default function BookingTicket() {
   };
 
   return (
-    <div className="relative min-h-screen bg-(--text-primary-color)">
+    <div className="relative min-h-screen bg-(--text-primary-color) pb-15">
       <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
       <div

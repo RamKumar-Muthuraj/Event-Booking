@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import { useLocation, matchPath } from "react-router-dom";
+import Footer from "./Footer";
 
 export default function MainLayout({ children }) {
 
@@ -20,6 +21,7 @@ export default function MainLayout({ children }) {
         {children}
       </main>
 
+      <Footer />
     </div>
   );
 }
