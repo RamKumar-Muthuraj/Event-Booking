@@ -94,6 +94,7 @@ export default function Form({
                   name={field.name}
                   value={formData[field.name] || ""}
                   onChange={handleChange}
+                  required={field.required}
                   className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cyan-500 text-(--text-primary-color) focus:border-cyan-500 outline-none transition"
                 >
                   <option value="">Select {field.label}</option>

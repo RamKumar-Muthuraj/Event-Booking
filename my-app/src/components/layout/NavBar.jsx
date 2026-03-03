@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Bell, Menu, X } from "lucide-react";
+import { Bell, LogOut, Menu, X } from "lucide-react";
+import { useAuth } from "../../context/AuthContext";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const { logout } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +69,9 @@ export default function NavBar() {
               border-2 border-(--text-primary-color)
             "
           />
+          <div onClick={() => logout()}>
+            <LogOut className="w-7 h-7 object-cover text-red-600 hover:text-red-500" />
+         </div>
         </div>
 
         <button
