@@ -9,6 +9,7 @@ import { useAuth } from "../context/AuthContext";
 export default function EventBooking() {
   const [search, setSearch] = useState("");
   const [activeFilter, setActiveFilter] = useState("Live");
+    const [isModalOpen, setIsModalOpen] = useState(false);
   const { addEvent, allEvents } = useEventBooking();
   const { currentUser } = useAuth();
 
@@ -86,7 +87,7 @@ export default function EventBooking() {
       </div>
 
       <div className="p-2 sm:p-">
-        <Booking filteredEvents={filteredEvents} currentUser={currentUser} />
+        <Booking filteredEvents={filteredEvents} currentUser={currentUser} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       </div>
     </div>
   );

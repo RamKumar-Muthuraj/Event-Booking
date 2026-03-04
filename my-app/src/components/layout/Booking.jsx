@@ -63,8 +63,7 @@ const BookingForm = [
   },
 ];
 
-export default function Booking({ filteredEvents, currentUser }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export default function Booking({ filteredEvents, currentUser, isModalOpen, setIsModalOpen }) {
   const { editEvent, deleteEvent } = useEventBooking();
   const [selectedEvent, setSelectedEvent] = useState(null);
   const { addEvent } = useEventBooking();

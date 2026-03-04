@@ -10,8 +10,6 @@ export function EventBookingProvider({ children }) {
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("events")) || [];
 
-    const jsonIds = eventsData.map((e) => e.id);
-
     const restoredDefaults = eventsData.filter(
       (jsonEvent) =>
         !stored.some((storedEvent) => storedEvent.id === jsonEvent.id),
@@ -32,9 +30,16 @@ export function EventBookingProvider({ children }) {
     localStorage.setItem("events", JSON.stringify(allEvents));
   }, [allEvents]);
 
-  const addEvent = (event) => {
-    setAllEvents((prev) => [...prev, { ...event, booked: [] }]);
-  };
+ const addEvent = (event) => {
+  setAllEvents(prev => [
+    ...prev,
+    {
+      ...event,
+      booked: [],
+      status: getEventStatus(event.date),
+    },
+  ]);
+};
 
   const editEvent = (updatedEvent) => {
     setAllEvents((prev) =>
@@ -52,6 +57,15 @@ export function EventBookingProvider({ children }) {
   const deleteEvent = (id) => {
     setAllEvents((prev) => prev.filter((e) => e.id !== id));
   };
+
+  useEffect(() => {
+  setAllEvents(prev =>
+    prev.map(event => ({
+      ...event,
+      status: getEventStatus(event.date),
+    }))
+  );
+}, []);
 
   return (
     <EventBookingContext.Provider

@@ -5,10 +5,10 @@
     "description": "Earth’s mightiest heroes unite once again to battle multiverse chaos.",
     "imageOne": "https://wallpaperaccess.com/full/329583.jpg",
     "imageTwo": "https://wallpaperaccess.com/full/329597.jpg",
-    "date": "2026-03-03",
+    "date": "2026-03-04",
     "location": "PVR Luxe, Bangalore",
     "price": "18",
-    "seats": "60",
+    "seats": "120",
     "status": "Upcoming"
   },
   {
@@ -17,10 +17,10 @@
     "description": "Experience Gotham like never before in a dark cinematic masterpiece.",
     "imageOne": "https://wallpaperaccess.com/full/317501.jpg",
     "imageTwo": "https://wallpaperaccess.com/full/317509.jpg",
-    "date": "2026-03-07",
+    "date": "2026-03-04",
     "location": "SPI Palazzo",
     "price": "15",
-    "seats": "60",
+    "seats": "120",
     "status": "Live"
   },
   {
@@ -29,10 +29,10 @@
     "description": "Top stand-up comedians delivering nonstop laughter.",
     "imageOne": "https://wallpaperaccess.com/full/248962.jpg",
     "imageTwo": "https://wallpaperaccess.com/full/248970.jpg",
-    "date": "2026-03-18",
+    "date": "2026-03-05",
     "location": "Phoenix Arena",
     "price": "12",
-    "seats": "60",
+    "seats": "120",
     "status": "Upcoming"
   },
   {
@@ -41,10 +41,10 @@
     "description": "Dance through sunset with live DJs and beach vibes.",
     "imageOne": "https://wallpaperaccess.com/full/1281606.jpg",
     "imageTwo": "https://wallpaperaccess.com/full/1281609.jpg",
-    "date": "2026-03-20",
+    "date": "2026-02-10",
     "location": "Mahabalipuram Beach",
     "price": "22",
-    "seats": "60",
+    "seats": "100",
     "status": "Upcoming"
   },
   {
@@ -53,10 +53,10 @@
     "description": "Explore future technology trends with industry leaders.",
     "imageOne": "https://wallpaperaccess.com/full/279547.jpg",
     "imageTwo": "https://wallpaperaccess.com/full/279548.jpg",
-    "date": "2026-03-25",
+    "date": "2026-03-06",
     "location": "Chennai Trade Center",
     "price": "25",
-    "seats": "60",
+    "seats": "100",
     "status": "Upcoming"
   },
   {
@@ -68,7 +68,79 @@
     "date": "2026-03-12",
     "location": "AGS Cinemas",
     "price": "19",
-    "seats": "60",
+    "seats": "100",
     "status": "Live"
+  },
+  {
+    "id": "11a1b1c1-1111-4e6b-a111-11a1a1a1a111",
+    "title": "Spider-Man Multiverse Premiere",
+    "description": "Swing into the multiverse with the latest Spider-Man cinematic adventure.",
+    "imageOne": "https://wallpaperaccess.com/full/124383.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/124389.jpg",
+    "date": "2026-03-01",
+    "location": "Golden Village, VivoCity",
+    "price": "17",
+    "seats": "100",
+    "status": "Upcoming"
+  },
+  {
+    "id": "22b2c2d2-2222-4e6b-a222-22b2b2b2b222",
+    "title": "Indie Music Fest",
+    "description": "An evening of live indie music performances from rising artists.",
+    "imageOne": "https://wallpaperaccess.com/full/151463.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/151470.jpg",
+    "date": "2026-03-09",
+    "location": "Esplanade Outdoor Theatre",
+    "price": "20",
+    "seats": "120",
+    "status": "Upcoming"
+  },
+  {
+    "id": "33c3d3e3-3333-4e6b-a333-33c3c3c3c333",
+    "title": "Startup Founders Meetup",
+    "description": "Network with startup founders, investors, and tech enthusiasts.",
+    "imageOne": "https://wallpaperaccess.com/full/117412.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/117418.jpg",
+    "date": "2026-03-04",
+    "location": "Marina Bay Sands Expo",
+    "price": "30",
+    "seats": "80",
+    "status": "Upcoming"
+  },
+  {
+    "id": "44d4e4f4-4444-4e6b-a444-44d4d4d4d444",
+    "title": "Anime Cosplay Convention",
+    "description": "Meet anime fans, join cosplay competitions, and explore fan art booths.",
+    "imageOne": "https://wallpaperaccess.com/full/179684.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/179688.jpg",
+    "date": "2026-03-11",
+    "location": "Suntec Convention Centre",
+    "price": "16",
+    "seats": "200",
+    "status": "Upcoming"
+  },
+  {
+    "id": "55e5f5g5-5555-4e6b-a555-55e5e5e5e555",
+    "title": "Food & Street Market",
+    "description": "Taste delicious street food from around the world in one vibrant market.",
+    "imageOne": "https://wallpaperaccess.com/full/134259.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/134263.jpg",
+    "date": "2026-03-13",
+    "location": "Clarke Quay Riverside",
+    "price": "10",
+    "seats": "150",
+    "status": "Upcoming"
+  },
+  {
+    "id": "66f6g6h6-6666-4e6b-a666-66f6f6f6f666",
+    "title": "Night Cinema: Interstellar",
+    "description": "Watch the sci-fi masterpiece under the stars with immersive sound.",
+    "imageOne": "https://wallpaperaccess.com/full/107651.jpg",
+    "imageTwo": "https://wallpaperaccess.com/full/107656.jpg",
+    "date": "2026-03-14",
+    "location": "Gardens by the Bay Lawn",
+    "price": "14",
+    "seats": "100",
+    "status": "Upcoming"
   }
 ]

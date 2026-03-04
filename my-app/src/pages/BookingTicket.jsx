@@ -183,7 +183,7 @@ export default function BookingTicket() {
             <CinemaScreen />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-2xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-3xl mx-auto">
             {generateSeats(seats).map((seat) => (
               <div
                 key={seat}
@@ -194,7 +194,7 @@ export default function BookingTicket() {
                   disabled={
                     bookedSeat.includes(seat) && !myBookedSeats.includes(seat)
                   }
-                  className={`w-8 h-8 sm:w-12 sm:h-12 rounded-sm transition ${
+                  className={`w-8 h-8 sm:w-10 sm:h-10 rounded-sm transition ${
                     myBookedSeats.includes(seat)
                       ? "bg-blue-500"
                       : bookedSeat.includes(seat)
