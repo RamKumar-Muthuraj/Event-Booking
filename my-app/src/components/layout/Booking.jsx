@@ -59,7 +59,7 @@ const BookingForm = [
     type: "number",
     match: /^\d+$/,
     min: 1,
-    max: 60,
+    max: 200,
   },
 ];
 
