@@ -160,6 +160,7 @@ export default function Booking({ filteredEvents, currentUser, isModalOpen, setI
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         size={"max-w-xl"}
+        modalName="BookingFormModal"
       >
         <Form
           fields={BookingForm}

@@ -5,11 +5,12 @@ import { useEventBooking } from "../context/EventBooking";
 import { Plus, Search } from "lucide-react";
 import { getEventStatus } from "../components/utils/eventStatus";
 import { useAuth } from "../context/AuthContext";
+import { trackSearch } from "../components/utils/trackSearchTerm";
 
 export default function EventBooking() {
   const [search, setSearch] = useState("");
   const [activeFilter, setActiveFilter] = useState("Live");
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { addEvent, allEvents } = useEventBooking();
   const { currentUser } = useAuth();
 
@@ -69,7 +70,13 @@ export default function EventBooking() {
             <input
               type="text"
               placeholder="Search events..."
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => {
+                const value = e.target.value;
+                setSearch(value);
+                if (value.length > 2) {
+                  trackSearch(value);
+                }
+              }}
               className="outline-none bg-transparent p-0.5 w-full text-sm"
             />
           </div>
@@ -87,7 +94,12 @@ export default function EventBooking() {
       </div>
 
       <div className="p-2 sm:p-">
-        <Booking filteredEvents={filteredEvents} currentUser={currentUser} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        <Booking
+          filteredEvents={filteredEvents}
+          currentUser={currentUser}
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+        />
       </div>
     </div>
   );

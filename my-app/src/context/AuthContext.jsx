@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { trackLogin } from "../components/utils/trackLogin";
 
 const AuthContext = createContext();
 
@@ -26,7 +26,6 @@ export function AuthProvider({ children }) {
   }, [allUser]);
 
   const register = (userData) => {
-
     const existingUser = allUser.find((u) => u.email === userData.email);
 
     if (existingUser) {
@@ -38,12 +37,12 @@ export function AuthProvider({ children }) {
   };
 
   const login = (userData) => {
-
     const existingUser = allUser.find(
       (u) => u.email === userData.email && u.password === userData.password,
     );
 
     if (existingUser) {
+      trackLogin(existingUser);
       localStorage.setItem("CurrentUser", JSON.stringify(existingUser));
       setCurrentUser(existingUser);
       console.log("Login successful", existingUser);

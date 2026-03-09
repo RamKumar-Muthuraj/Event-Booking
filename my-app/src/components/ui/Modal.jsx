@@ -1,8 +1,10 @@
 import { useEffect } from "react";
+import { trackModalOpen } from "../utils/trackModelTrigger";
 
-export default function Modal({ isOpen, onClose, children, size }) {
+export default function Modal({ isOpen, onClose, children, size, modalName }) {
+  trackModalOpen(modalName);
+
   useEffect(() => {
-    
     const handleEsc = (e) => {
       if (e.key === "Escape") onClose();
     };
