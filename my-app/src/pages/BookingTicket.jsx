@@ -9,6 +9,7 @@ import DisplayCard from "../components/ui/DisplayCard";
 import ConfirmModal from "../components/ui/ConfirmModal";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import ToolTip from "../components/ui/ToolTip";
+import { trackBooking } from "../components/utils/trackBooking";
 
 export default function BookingTicket() {
   const { id } = useParams();
@@ -40,6 +41,17 @@ export default function BookingTicket() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (!event) return;
+
+    window.gtag?.("event", "view_event", {
+      event_name: title,
+      event_id: id,
+      location: location,
+      price: price,
+    });
+  }, [event]);
+
   const generateSeats = (totalSeats) => {
     return Array.from({ length: totalSeats }, (_, i) => {
       const row = String.fromCharCode(65 + Math.floor(i / 10));
@@ -56,10 +68,16 @@ export default function BookingTicket() {
   const bookedSeat = event?.booked?.flatMap((b) => b.seats) || [];
 
   const displaySeats = [...new Set([...myBookedSeats, ...selectedSeats])];
+
   const handleSelectedSeats = (seat) => {
     if (bookedSeat?.includes(seat) && !myBookedSeats?.includes(seat)) {
       return;
     }
+
+    window.gtag?.("event", "select_seat", {
+      seat_id: seat,
+      event_id: id,
+    });
 
     setSelectedSeats((prev) =>
       prev.includes(seat) ? prev.filter((s) => s !== seat) : [...prev, seat],
@@ -104,6 +122,8 @@ export default function BookingTicket() {
       ...event,
       booked: updatedBookings,
     });
+
+    trackBooking(id, validSeats, price);
   };
 
   return (
@@ -186,40 +206,39 @@ export default function BookingTicket() {
 
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-3xl mx-auto">
             {generateSeats(seats).map((seat) => (
-               <ToolTip 
+              <ToolTip
                 key={seat}
-                 content={seat}
-                 config={{
-                  position : 'top',
-                  trigger : 'hover',
-                  delay :200,
-                 }}>
-              <div
-                className="max-w-xl flex flex-col items-center gap-2"
+                content={seat}
+                config={{
+                  position: "top",
+                  trigger: "hover",
+                  delay: 200,
+                }}
               >
-                <button
-                  onClick={() => handleSelectedSeats(seat)}
-                  disabled={
-                    bookedSeat.includes(seat) && !myBookedSeats.includes(seat)
-                  }
-                  className={`w-8 h-8 sm:w-10 sm:h-10 rounded-sm transition ${
-                    myBookedSeats.includes(seat)
-                      ? "bg-blue-500"
-                      : bookedSeat.includes(seat)
-                        ? "bg-red-500 cursor-not-allowed"
-                        : selectedSeats.includes(seat)
-                          ? "bg-blue-400"
-                          : "bg-gray-500 hover:bg-blue-400"
-                  }
+                <div className="max-w-xl flex flex-col items-center gap-2">
+                  <button
+                    onClick={() => handleSelectedSeats(seat)}
+                    disabled={
+                      bookedSeat.includes(seat) && !myBookedSeats.includes(seat)
+                    }
+                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-sm transition ${
+                      myBookedSeats.includes(seat)
+                        ? "bg-blue-500"
+                        : bookedSeat.includes(seat)
+                          ? "bg-red-500 cursor-not-allowed"
+                          : selectedSeats.includes(seat)
+                            ? "bg-blue-400"
+                            : "bg-gray-500 hover:bg-blue-400"
+                    }
   `}
-                >
-                  <Armchair className="w-6 h-6 text-white mx-auto" />
-                </button>
+                  >
+                    <Armchair className="w-6 h-6 text-white mx-auto" />
+                  </button>
 
-                <span className="text-xs text-(--accent-color) font-medium">
-                  {seat}
-                </span>
-              </div>
+                  <span className="text-xs text-(--accent-color) font-medium">
+                    {seat}
+                  </span>
+                </div>
               </ToolTip>
             ))}
           </div>
